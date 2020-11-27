@@ -6,6 +6,19 @@
 //  Copyright © 2020 Rebekah Hale. All rights reserved.
 //
 
+/*
+ The user interface has (at a minimum) an image view for the place’s photo and labels for the following pieces of information about the selected place
+ Name
+ Address
+ Phone number
+ Whether the place is open now or not
+ At least one review’s text
+ 
+ More information if you want!
+ Make a Place Detail request to get the above information
+ While fetching/parsing data, show an indeterminate progress indicator using the MBProgressHUD Cocoapod
+ */
+
 import UIKit
 
 class PlaceDetailViewController: UIViewController {
@@ -17,10 +30,13 @@ class PlaceDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var adressLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
+    @IBOutlet var ifOpenLabel: UILabel!
+    @IBOutlet var reviewText: UITextView!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
+    
    
 
     /*

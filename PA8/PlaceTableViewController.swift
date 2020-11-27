@@ -25,13 +25,16 @@
  */
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
-class PlaceTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
-    
-    
-    
+class PlaceTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GMSMapViewDelegate {
     var places = [Place]()
+    var placesClient: GMSPlacesClient!
+    
+    @IBOutlet var seachBar: UISearchBar!
+    @IBOutlet var updateLocation:  UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
